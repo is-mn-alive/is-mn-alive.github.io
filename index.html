@@ -17,12 +17,18 @@
 
         .container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100%;
             text-align: center;
         }
-
+        
+        h1 {
+            font-size: 3vw;
+            margin: 0 0 20px 0; /* Add space below the header */
+        }
+        
         #timer {
             font-size: 4vw; /* Responsive size */
             font-weight: bold;
@@ -32,6 +38,9 @@
 
         /* Adjust font size for mobile screens */
         @media (max-width: 600px) {
+            h1 {
+                font-size: 16px;
+            }
             #timer {
                 font-size: 20px;
             }
@@ -39,9 +48,9 @@
     </style>
 </head>
 <body>
-    <p style="font-size: 16px;">Time since any sign of life:</p>
-    <br><br>
     <div class="container">
+        <p>Time since any sign of life:</p>
+        
         <div id="timer">Calculating...</div>
     </div>
 
